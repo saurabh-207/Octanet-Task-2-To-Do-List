@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&display=swap');
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-image: url(bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1630px;
+    min-width: 320px;
+}
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.input-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #d1cece;
+    
+    
+}
+.input-reset::-webkit-search-decoration,
+.input-reset::-webkit-search-cancel-button,
+.input-reset::-webkit-search-results-button,
+.input-reset::-webkit-search-results-decoration {
+    display: none;
+}
+.todo {
+    margin: 10vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #862caf25;
+    border-radius: 10px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #fa0606;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 260%;
+    font-style:italic;
+    
+        text-transform: uppercase;
+       background-image: linear-gradient(
+         -225deg,
+         #231557 0%,
+         #44107a 29%,
+         #ff1361 67%,
+         #fff800 100%
+       );
+       background-size: auto auto;
+       background-clip: border-box;
+       background-size: 200% auto;
+       color: #fff;
+       background-clip: text;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       animation: textclip 2s linear infinite;
+       display: inline-block;
+           
+     }
+     
+     @keyframes textclip {
+       to {
+         background-position: 200% center;
+       }
+     }
+
+.img1 {
+    margin-left: 15px;
+    max-width: 40px;
+      
+}
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+.input {
+    flex: 1;
+    padding: 10px 15px;
+    height: 40px;
+    border: 1px solid rgb(240, 237, 237);
+    border-radius: 10px 0 0 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.input:focus {
+    outline: none;
+}
+.add {
+    width: 25%;
+    color: #030303;
+    font-size: 110%;
+    font-weight: bold;
+    background-color: #4f09f12f;
+    border: 1px solid transparent;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.add:hover {
+    background-color: rgba(193, 195, 199, 0.8);
+    
+}
+.item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.item.checked {
+    text-decoration: line-through;
+    color: #cecece;
+}
+.item.checked .check {
+    background-color: #fff;
+    border: 2px solid rgba(65, 81, 103, 0.4);
+}
+.item.checked .check::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 8px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("https://svgsilh.com/svg/146095.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(5deg);
+}
+.check {
+    position: relative;
+    display: inline-block;
+    order: -1;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #cecece;
+    border-radius: 50%;
+    border: 2px solid #000205c9;
+    transition: all 0.3s ease;
+}
+.done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    background: url("https://ikonki.svgpng.ru/wp-content/uploads/2021/12/Krestiksvgpng.ru_.png") no-repeat;
+    background: url("https://cdn-icons-png.flaticon.com/128/13705/13705320.png")no-repeat;
+    background-size: 80%;
+    background-position: top 3px left 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.done:hover {
+    background-color: #1414036c;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
